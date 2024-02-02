@@ -10,7 +10,15 @@ public class Bullet : MonoBehaviour
     {
         Destroy(gameObject, life);
     }
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Target"))
+        {
+            
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+    }
     //private void OnCollisionEnter(Collision collision)
     //{
     //    Destroy(gameObject);

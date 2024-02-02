@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
     public void OnButtonClick(Button button)
     {
         var type = button.GetComponentInChildren<Text>().text;
-        GameManager.Instance.gunType = type;
+        DataFlow.Instance.gunType = type;
         SceneManager.LoadScene(1);
     }
 

@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun : MonoBehaviour
+public class Gun : MonoBehaviour  // INHERITANCE
 {
     //public GameObject gunPrefab;
     public Transform bullethole;
     [SerializeField] protected GameObject bulletPrefab;
     public float rapidity;
     protected bool canShoot = true;
-    protected float speed = 25f;
+    protected float speed = 35f;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +25,7 @@ public class Gun : MonoBehaviour
         }
     }
 
-    public virtual void Shoot()
+    public virtual void Shoot() // INHERITANCE
     {
         StartCoroutine(FireRate());
         

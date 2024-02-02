@@ -26,9 +26,9 @@ public class PlayerController : MonoBehaviour
     {
         spawnManager = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
         characterController = GetComponent<CharacterController>();
-        if (GameManager.Instance != null)
+        if (DataFlow.Instance != null)
         {
-            SpawnGun(GameManager.Instance.gunType);
+            SpawnGun(DataFlow.Instance.gunType);
         }
         else
             SpawnGun("Firearm");
@@ -85,4 +85,5 @@ public class PlayerController : MonoBehaviour
     {
         gun = spawnManager.SpawnGun(type, gunPos);
     }
+
 }

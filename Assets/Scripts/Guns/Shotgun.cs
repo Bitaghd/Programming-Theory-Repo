@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shotgun : Gun
+public class Shotgun : Gun // INHERITANCE
 {
     [SerializeField] int spread;
-    public override void Shoot() // POLYMORPHIS
+    public override void Shoot() // POLYMORPHISM
     {
         StartCoroutine(FireRate());
     }
